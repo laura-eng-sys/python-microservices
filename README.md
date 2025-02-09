@@ -29,6 +29,30 @@ touch mylib/__init__.py
 **********************************************************
 
 1- let's populate the makefile
+install:
+	#install commands
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+format:
+	#format code
+#check the syntax of the source code
+lint:
+	#flake8 or #pylint    
+test:
+	#test
+deploy:
+	#deploy
+#to run 1 command, we type : make install for ex or make lint...
+#to run these command at once, we type:
+all:install format lint test deploy
+
+2-populate requirements.txt
+wikipedia-----------------------wikipedia==1.4.0
+pytest--------------------------pytest==8.3.4
+pytest-cov----------------------pytest-cov==6.0.0
+pylint--------------------------pylint==3.3.4
+black---------------------------black==25.1.0
+fire----------------------------fire==0.7.0
 
 
 
