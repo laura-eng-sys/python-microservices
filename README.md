@@ -18,4 +18,47 @@ source ~/.venv/bin/activate
 3-create empty files:
 requirements.txt
 Dockerfile
-makefile
+Makefile
+
+4-create a folder mylib as our project library. cd inside this folder and create files __init__.py; logic.py(to keep our source code. we can also use these cmds:
+mkdir mylib
+touch mylib/__init__.py
+
+5- create a file called main.py for our infrastructure
+
+**********************************************************************
+1- let's populate the makefile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-
