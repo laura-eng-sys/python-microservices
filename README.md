@@ -73,8 +73,16 @@ python main.py
 4- edit lint in makefile and run make lint
 
 -ex of lint failure:
+"C:\Users\sadia\OneDrive\Pictures\Screenshots 1\Screenshot 2025-02-08 231802.png"
 
+if we edit our main.py as below, python main.py will still run successfully, but make lint will fail and procceed to code failure(see screenshot up)
+main.py reedited:
 
+from mylib.logic import wiki
+
+result=wiki()
+result=result
+print(result)
 
 
 
