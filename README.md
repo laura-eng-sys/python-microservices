@@ -72,7 +72,7 @@ python main.py
 
 4- edit lint in makefile and run make lint
 
-
+-ex of lint failure:
 
 
 
