@@ -12,7 +12,8 @@ format:
 	black *.py mylib/*.py
 #check the syntax of the source code
 lint:
-	#flake8 or #pylint    
+	#flake8 or #pylint 
+	pylint --disable=R,C *.py mylib/*.py 
 test:
 	#test
 deploy:

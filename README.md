@@ -70,7 +70,7 @@ print(wiki())
 ==then run make format
 python main.py
 
-
+4- edit lint in makefile and run make lint
 
 
 
