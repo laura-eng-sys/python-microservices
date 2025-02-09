@@ -1,4 +1,4 @@
-name: Deploy to Amazon ECS
+name: python application test with Github Actions
 on: [push]
 jobs:
   build:
