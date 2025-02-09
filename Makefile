@@ -16,6 +16,9 @@ lint:
 	pylint --disable=R,C *.py mylib/*.py 
 test:
 	#test
+	python -m pytest -vv --cov=mylib test_logic.py
+build:
+	#build container
 deploy:
 	#deploy
 #to run 1 command, we type : make install for ex or make lint...

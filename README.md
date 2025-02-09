@@ -85,7 +85,13 @@ result=wiki()
 result=result
 print(result)
 
+5-edit our test steps and add a build step in makefile
+-create a file test_logic.py and add:
 
+from mylib.logic import wiki
+
+def test_wiki():
+    assert "god" in wiki()
 
 
 
