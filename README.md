@@ -54,6 +54,21 @@ pylint--------------------------pylint==3.3.4
 black---------------------------black==25.1.0
 fire----------------------------fire==0.7.0
 
+3- let's edit format code from our makefile and our codes which are the logic.py and main.py files
+logic.py:
+import wikipedia
+def wiki(name="War Goddess", length=1):
+    """This is wikipedia fetcher"""
+
+    my_wiki = wikipedia.summary(name, length)
+    return my_wiki
+    
+main.py:
+from mylib.logic import wiki
+print(wiki())
+
+==then run make format
+python main.py
 
 
 
