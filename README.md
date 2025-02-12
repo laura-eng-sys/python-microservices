@@ -93,7 +93,18 @@ from mylib.logic import wiki
 def test_wiki():
     assert "god" in wiki()
 
+6- Build a cli using python Fire library 
+-create a file : touch cli-fire.py and insert :
+#!/usr/bin/env python
+import fire
+from mylib.logic import wiki
 
+if __name__=="__main":
+    fire.Fire(wiki)
+
+-save and type:
+chmod +x cli-fire.py
+./
 
 
 
