@@ -93,6 +93,7 @@ from mylib.logic import wiki
 def test_wiki():
     assert "god" in wiki()
 
+
 6- Build a cli using python Fire library 
 -create a file : touch cli-fire.py and insert :
 #!/usr/bin/env python
@@ -121,12 +122,69 @@ if __name__ == '__main__':
 
 IF YOU RUN python cli-fire.py --name=LAURA  in the second code, the output will be Hello LAURA
 
+-edit logic.py by adding 
+def search_wiki(name):
+    """Search Wikipedia for Names"""
 
+    results = wikipedia.search(name)
+    return results
 
+-type the code below in cli-fire.py;
 
+import fire
+from mylib import logic
 
+if __name__=="__main__":
+    fire.Fire(logic)
 
+-run the cmd 
+./cli-fire.py --help
+./cli-fire.py search_wiki "Barack"
 
+7- let's build our api using fastapi
+-edit requirements.txt by adding fastapi and uvicorn and run make install, then pip freeze and copy the version into requirements.txt
+-edit the main.py file:
+
+#from mylib.logic import wiki
+
+#result = wiki()
+#print(result)
+             # ex of a lint failure
+# result=wiki()
+# result=result
+# print(result)
+
+#****************let's build our microservice******************
+from fastapi import FastAPI
+import uvicorn
+from mylib.logic import search_wiki
+from mylib.logic import wiki as wikilogic
+
+app = FastAPI()
+@app.get("/")
+async def root():
+    return {"message": "Wikipedia API. Call /search or /wiki"}
+#first endpoint
+@app.get("/search/{value}")
+async def add(value: str) :
+    """Page to search in wikipedia"""
+    result = search_wiki(value)
+    return {"result": result}
+
+		#2nd endpoint
+@app.get("/wiki/{name}")
+async def wiki(name: str) :
+    """retrieve info from ikipedia"""
+    result = search_wiki(name)
+    return {"result": result}
+
+if __name__ == '__main__':
+    uvicorn.run(app, port=8000, host='0.0.0.0')
+
+	-save and run python main.py, then open in the browser and do your search
+    -also open the browser and add /docs or /wiki/(name you want)
+
+       
 
 
 

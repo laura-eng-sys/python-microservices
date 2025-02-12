@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import fire
-from mylib.logic import wiki
+#import fire
+#from mylib.logic import wiki
 
-if __name__ == '__main__':
-    fire.Fire(wiki)
+#if __name__ == '__main__':
+#    fire.Fire(wiki)
 
-# ANOTHER CODE
+            # ANOTHER CODE
 
 #import fire
 
@@ -16,3 +16,11 @@ if __name__ == '__main__':
 
 #if __name__ == "__main__":
 #    fire.Fire(hello)
+
+             #another code
+
+import fire
+from mylib import logic
+
+if __name__=="__main__":
+    fire.Fire(logic)
