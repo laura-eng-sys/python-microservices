@@ -30,7 +30,7 @@ async def add(value: str) :
 @app.get("/wiki/{name}")
 async def wiki(name: str) :
     """retrieve info from ikipedia"""
-    result = search_wiki(name)
+    result = wikilogic(name)
     return {"result": result}
 
 if __name__ == '__main__':
