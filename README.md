@@ -99,13 +99,27 @@ def test_wiki():
 import fire
 from mylib.logic import wiki
 
-if __name__=="__main":
-    fire.Fire(wiki)
+if __name__ == '__main__':
+  fire.Fire(wiki)
 
 -save and type:
 chmod +x cli-fire.py
-./
+python cli-fire.py 
+python cli-fire.py --name=God(any name that you want to search in wikipedia)
+./cli-fire.py --help
+./cli-fire.py --name laura
 
+#ANOTHER CODE
+
+import fire
+
+def hello(name="World"):
+  return "Hello %s!" % name
+
+if __name__ == '__main__':
+  fire.Fire(hello)
+
+IF YOU RUN python cli-fire.py --name=LAURA  in the second code, the output will be Hello LAURA
 
 
 
