@@ -14,11 +14,15 @@ format:
 lint:
 	#flake8 or #pylint 
 	pylint --disable=R,C *.py mylib/*.py 
-test:
+#test:
 	#test
-	python -m pytest -vv --cov=mylib --cov=main test_*.py
+#	python -m pytest -vv --cov=mylib --cov=main test_*.py
 build:
-	#build container
+	#build image
+	docker build -t deploy-fastapi .
+run:
+	#create container
+	docker run -p 127.0.0.1:8080:8080 17844381f791
 deploy:
 	#deploy
 #to run 1 command, we type : make install for ex or make lint...

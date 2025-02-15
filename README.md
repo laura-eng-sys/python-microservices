@@ -191,6 +191,9 @@ install textblob in the rquirements.txt file
 adjust test section in the makefile
 add def phrase in the logic.py file   
 
+8-containerize our app
+
+create a Dockerfile
 
 
 
