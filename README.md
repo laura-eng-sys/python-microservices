@@ -184,7 +184,12 @@ if __name__ == '__main__':
 	-save and run python main.py, then open in the browser and do your search
     -also open the browser and add /docs or /wiki/(name you want)
 
-       
+       3rd endpoint
+it is phrase/name in themain.py file
+also create a file test_main.py for this route
+install textblob in the rquirements.txt file
+adjust test section in the makefile
+add def phrase in the logic.py file   
 
 
 
